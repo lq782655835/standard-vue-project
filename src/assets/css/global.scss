@@ -1,0 +1,36 @@
+@import './reset.scss';
+@import './variables.scss';
+
+* {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: $font-family-regular;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: $content-width;
+    height: 100%;
+    background-color: $white;
+    color: $black;
+    font-size: 14px;
+    line-height: 1.375;
+}
+
+.layout {
+    width: $content-width;
+    margin: 0 auto;
+}
