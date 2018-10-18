@@ -1,5 +1,6 @@
 import Vue from 'vue'
 
+import './svg' /* 导入svg资源 */
 import './directives' /* 导入所有指令 */
 
 /** global component */

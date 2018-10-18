@@ -17,7 +17,7 @@
                 <u-button v-if="okButton" @click="ok"
                     :disabled="!enableConfirm" color="primary">{{okButton}}</u-button>
             </div>
-            <!-- <u-icon v-if="showClose" name="close" class="close" @click="cancel" /> -->
+            <u-icon v-if="showClose" name="close" @click="cancel" class="close" />
         </div>
     </div>
 </template>

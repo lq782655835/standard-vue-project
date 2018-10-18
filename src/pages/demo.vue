@@ -45,10 +45,8 @@
                     <u-table-column label="分类" width="100px">{{row.tab}}</u-table-column>
                     <u-table-column label="名称" width="100px">{{row.title}}</u-table-column>
                     <u-table-column label="操作" width="60px">
-                        <u-link>编辑</u-link>
-                        <u-link>删除</u-link>
-                        <!-- <u-icon name="edit" @click="editRow(row)"/>
-                        <u-icon name="delete" @click="deleteRow(row)"/> -->
+                        <u-icon name="edit" />
+                        <u-icon name="delete" />
                     </u-table-column>
                 </template>
             </u-table>
@@ -96,6 +94,12 @@ export default {
 .g-demo {
     & > * {
         margin: 10px 0;
+    }
+
+    .u-table{
+        .u-icon {
+            margin-right: 8px;
+        }
     }
 }
 </style>
