@@ -7,13 +7,15 @@
     "build": "vue-cli-service build",
     "precommit": "npm run format && npm run lint && git add .",
     "format": "prettier --write './src/**/*.{js,vue,json}'",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "svg": "vsvg -s ./src/assets/svg -t ./src/assets/icon"
   },
   "dependencies": {
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "vue-svgicon": "^2.1.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.3",
