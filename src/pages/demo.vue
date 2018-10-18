@@ -27,6 +27,18 @@
             <u-button @click="confirmByJS">编程式打开Confirm模态框</u-button>
             <u-button @click="alertByJS">编程式打开Alert模态框</u-button>
         </u-demo-item>
+        <u-demo-item name="u-tabs/tab">
+            <u-tabs>
+                <u-tab title="普通tab1">测试1tab内容</u-tab>
+                <u-tab title="普通tab2">测试2tab内容</u-tab>
+                <u-tab title="普通tab3">测试3tab内容</u-tab>
+            </u-tabs>
+            <u-tabs :value="1">
+                <u-tab title="去往首页" to="/"></u-tab>
+                <u-tab title="去往Demo" to="/demo"></u-tab>
+                <u-tab title="路由tab">测试3内容</u-tab>
+            </u-tabs>
+        </u-demo-item>
         <u-demo-item name="u-table">
             <u-table :list="topicList">
                 <template slot-scope="{ row, rowIndex }">
