@@ -1,16 +1,15 @@
 $content-width: 1200px;
+$component-height: 32px;
 
 $white: #ffffff;
 $black: #000000;
-$primary-color: #337EFF;
-$border-color: #E6E6EB;
-$brand-disabled: #c4ccd8;
-$normal-color-m: #222222;
-$normal-color-s: #333333;
-$tip-color-m: #666666;
-$tip-color-s: #CCCCCC;
-$error-color: #F24957;
-$component-height: 32px;
+$primary-color: #337EFF;    // 主颜色
+$border-color: #E6E6EB;     // 边框颜色
+$disabled-color: #c4ccd8;   // 禁用颜色
+$input-color: #333333;      // input输入框颜色
+$tip-color: #CCCCCC;        // input 提示字符颜色
+$success-color: #189971;    // toast成功颜色
+$error-color: #F24957;      // toast失败颜色
 
 $font-family-medium: 'PingFangSC-Medium', Helvetica, Tahoma, Arial, 'Microsoft YaHei',
     'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;

@@ -23,7 +23,6 @@ export default {
     padding: 8px 24px;
     border: 1px solid $border-color;
     border-radius: 2px;
-    color: $tip-color-m;
     background-color: #ffffff;
     letter-spacing: 0;
     line-height: 14px;
@@ -49,8 +48,8 @@ export default {
 
     &[disabled='disabled'] {
         cursor: not-allowed;
-        background: $brand-disabled;
-        border: 1px solid $brand-disabled;
+        background: $disabled-color;
+        border: 1px solid $disabled-color;
         color: #ffffff;
     }
 }

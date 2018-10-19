@@ -70,7 +70,7 @@ export default {
         width: 100%;
         height: 100%;
         font-size: 14px;
-        color: $normal-color-s;
+        color: $input-color;
         padding: 6px 10px;
         border: 1px solid $border-color;
         border-radius: 2px;
@@ -100,7 +100,7 @@ export default {
         }
 
         .placeholder-text {
-            @include font-normal(14px, $tip-color-s);
+            @include font-normal(14px, $tip-color);
             letter-spacing: 0;
             line-height: 14px;
         }

@@ -48,9 +48,6 @@ export default Toast
 </script>
 
 <style lang="scss" scoped>
-$success-color: #189971;
-$error-color: red;
-
 .u-toast {
     position: fixed;
     top: 56px;

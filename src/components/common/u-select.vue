@@ -1,6 +1,6 @@
 <template>
-    <div class="u-select" tabIndex="0" @blur="open = false">
-        <div @click.stop="clickInput" :class="['label', { disabled }]">
+    <div class="u-select" :disabled="disabled" tabIndex="0" @blur="open = false">
+        <div @click.stop="clickInput" class="label">
             {{ selectedItem.label || '请选择' }}
             <i :class="['arrow', open ? 'up' : 'down']"/>
         </div>
@@ -53,7 +53,6 @@ export default {
 </script>
 
 <style lang="scss">
-$input-height: 32px;
 $max-height: 220px;
 
 .u-select {
@@ -61,12 +60,18 @@ $max-height: 220px;
     display: inline-block;
     border: 1px solid #cccccc;
     border-radius: 2px;
-    height: $input-height;
-    line-height: $input-height;
+    height: $component-height;
+    line-height: $component-height;
     background: #fff;
     color: #738298;
     outline: none;
     user-select: none;
+
+    &[disabled] {
+        cursor: not-allowed;
+        color: #ffffff;
+        background: #95a2b5;
+    }
 
     &[size='l'] {
         width: 140px;
@@ -82,12 +87,6 @@ $max-height: 220px;
         width: 100%;
         height: 100%;
         padding: 0 26px;
-
-        &.disabled {
-            cursor: not-allowed;
-            color: #ffffff;
-            background: #95a2b5;
-        }
 
         .arrow {
             position: absolute;

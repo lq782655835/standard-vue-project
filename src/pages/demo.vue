@@ -29,6 +29,10 @@
             <br /><br />
             <u-input type="textarea" placeholder="textarea输入框" />
         </u-demo-item>
+        <u-demo-item name="u-switch">
+            <u-switch v-model="switchValue" />
+            <u-switch disabled />
+        </u-demo-item>
 
         <u-demo-item name="u-layout">
             <u-layout>
@@ -97,14 +101,15 @@ export default {
             selectList: [
                 {
                     label: '简写版select',
-                    value: 123
+                    value: 1
                 },
                 {
                     label: '麻雀虽小',
-                    value: 234
+                    value: 2
                 }
             ],
-            selectValue: 123
+            selectValue: 1,
+            switchValue: true
         }
     },
     created() {
