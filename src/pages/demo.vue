@@ -11,11 +11,12 @@
             <u-button color="primary" size="s">小按钮</u-button>
             <u-button color="primary" href="https://www.baidu.com">导链按钮</u-button>
         </u-demo-item>
-        <u-demo-item name="u-icon">
+        <u-demo-item name="u-icon" desc="icon组件使用本地svg/image/网络图片">
             <u-icon name="edit" />
-            <u-icon scale="3" name="delete" color="#00FF00" />
+            <u-icon scale="3" name="delete" color="#00FF00" @click="$toast.show('本地图片库更加适合实际项目')"/>
             <u-icon name="close" />
             <u-icon name="slef-image.png" />
+            <u-icon name="https://static.ws.126.net/f2e/www/index20170701/images/sprite_img.svg?0619" />
         </u-demo-item>
         <u-demo-item name="u-layout">
             <u-layout>
