@@ -16,8 +16,20 @@
             <u-icon scale="3" name="delete" color="#00FF00" @click="$toast.show('本地图片库更加适合实际项目')"/>
             <u-icon name="close" />
             <u-icon name="slef-image.png" />
-            <u-icon name="https://static.ws.126.net/f2e/www/index20170701/images/sprite_img.svg?0619" />
+            <u-icon name="https://upload.wikimedia.org/wikipedia/commons/6/6b/NetEase_Music_logo.svg" class="cloud-music"/>
         </u-demo-item>
+        <u-demo-item name="u-select">
+            <u-select v-model="selectValue" :list="selectList" />
+            <u-select :list="selectList" size="s" disabled />
+        </u-demo-item>
+        <u-demo-item name="u-input/textarea">
+            <u-input v-model="inputValue" placeholder="请输入专题名" />
+            <u-input size="s" placeholder="小输入框" />
+            <u-input disabled placeholder="禁用输入框" />
+            <br /><br />
+            <u-input type="textarea" placeholder="textarea输入框" />
+        </u-demo-item>
+
         <u-demo-item name="u-layout">
             <u-layout>
                 <u-button>默认横向排列</u-button>
@@ -30,13 +42,7 @@
                 <u-button>竖向排列</u-button>
             </u-layout>
         </u-demo-item>
-        <u-demo-item name="u-input/textarea">
-            <u-input v-model="topicValue" placeholder="请输入专题名" />
-            <u-input size="s" placeholder="小输入框" />
-            <u-input disabled placeholder="禁用输入框" />
-            <br /><br />
-            <u-input type="textarea" placeholder="textarea输入框" />
-        </u-demo-item>
+
         <u-demo-item name="u-toast">
             <u-button @click="$toast.show('这是一个toast提示框')">编程式打开toast</u-button>
             <u-button @click="$toast.show('这是一个错误提示框', 'error')">错误toast</u-button>
@@ -59,7 +65,7 @@
             </u-tabs>
         </u-demo-item>
         <u-demo-item name="u-table">
-            <u-table :list="topicList">
+            <u-table :list="tableList">
                 <template slot-scope="{ row, rowIndex }">
                     <u-table-column label="分类" width="100px">{{row.tab}}</u-table-column>
                     <u-table-column label="名称" width="100px">{{row.title}}</u-table-column>
@@ -85,15 +91,29 @@ export default {
     components: { UDemoItem },
     data() {
         return {
-            topicList: [],
-            topicValue: '',
-            modalVisible: false
+            tableList: [],
+            inputValue: '',
+            modalVisible: false,
+            selectList: [
+                {
+                    label: '简写版select',
+                    value: 123
+                },
+                {
+                    label: '麻雀虽小',
+                    value: 234
+                }
+            ],
+            selectValue: 123
         }
     },
     created() {
-        this._getTopicList()
+        this._gettableList()
     },
     methods: {
+        test() {
+            l(this.selectValue)
+        },
         confirmByJS() {
             this.$confirm('这是一个Confirm确认框')
                 .then(() => alert('你选择了确定'))
@@ -102,8 +122,8 @@ export default {
         alertByJS() {
             this.$alert('这是一个Alert提示框').then(() => l('alert确定'))
         },
-        async _getTopicList() {
-            this.topicList = await getAllTopic()
+        async _gettableList() {
+            this.tableList = await getAllTopic()
         }
     }
 }
@@ -115,10 +135,14 @@ export default {
         margin: 10px 0;
     }
 
-    .u-table{
+    .u-table {
         .u-icon {
             margin-right: 8px;
         }
+    }
+
+    .cloud-music {
+        width: 50px;
     }
 }
 </style>

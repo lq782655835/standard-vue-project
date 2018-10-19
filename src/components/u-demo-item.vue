@@ -13,7 +13,7 @@
 <script>
 export default {
     props: {
-        name: { type: String, default: ''},
+        name: { type: String, default: '' },
         desc: { type: String, default: '' }
     }
 }

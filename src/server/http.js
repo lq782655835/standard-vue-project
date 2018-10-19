@@ -2,7 +2,6 @@ import Vue from 'vue'
 import axios from 'axios'
 import { rootURL } from '@/utils/config'
 
-console.log(rootURL)
 const service = axios.create({
     baseURL: rootURL, // api的base_url
     timeout: 15000 // 请求超时时间
