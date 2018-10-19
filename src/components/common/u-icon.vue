@@ -15,6 +15,7 @@ export default {
     props: {
         name: { type: String, default: '' },
         disclick: { type: Boolean, default: false },
+        /* blew api look at https://github.com/MMF-FE/vue-svgicon */
         scale: { type: [String, Number], default: '1' },
         original: { type: Boolean, default: true }
     },

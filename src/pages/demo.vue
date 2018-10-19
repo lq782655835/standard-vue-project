@@ -11,6 +11,24 @@
             <u-button color="primary" size="s">小按钮</u-button>
             <u-button color="primary" href="https://www.baidu.com">导链按钮</u-button>
         </u-demo-item>
+        <u-demo-item name="u-icon">
+            <u-icon name="edit" />
+            <u-icon scale="3" name="delete" color="#00FF00" />
+            <u-icon name="close" />
+            <u-icon name="slef-image.png" />
+        </u-demo-item>
+        <u-demo-item name="u-layout">
+            <u-layout>
+                <u-button>默认横向排列</u-button>
+                <u-button>默认横向排列</u-button>
+                <u-button>默认横向排列</u-button>
+            </u-layout>
+            <u-layout dir="v" display="block" gap="s">
+                <u-button>竖向排列 && block对象</u-button>
+                <u-button>竖向排列</u-button>
+                <u-button>竖向排列</u-button>
+            </u-layout>
+        </u-demo-item>
         <u-demo-item name="u-input/textarea">
             <u-input v-model="topicValue" placeholder="请输入专题名" />
             <u-input size="s" placeholder="小输入框" />
