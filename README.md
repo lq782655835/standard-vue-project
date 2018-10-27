@@ -66,6 +66,36 @@ project
 │   README.md      // 项目说明
 </pre>
 
+## Light Weight Component
+
+### Base
+
+* u-link
+* u-button
+* u-icon
+* u-layout
+
+### Form
+* u-input(&& textarea)
+* u-select
+* u-switch @hsy
+* u-checkbox
+* u-radio TODO
+
+### Layout
+
+* u-tab
+* u-table @henry
+* u-pagination TODO
+* u-tree @yrq110
+* u-step TODO
+
+### Dialog
+
+* u-modal(&& confirm && alert)
+* u-toast
+* u-popup TODO
+
 ## Preview
 
 ![image](https://user-images.githubusercontent.com/6310131/47153017-e3d31880-d310-11e8-9bea-f53cb2cb22c6.png)

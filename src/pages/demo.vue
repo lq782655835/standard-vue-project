@@ -33,10 +33,14 @@
             <u-switch v-model="switchValue" />
             <u-switch disabled />
         </u-demo-item>
+        <u-demo-item name="u-checkbox">
+            <u-checkbox v-model="checkboxValue" label="多选框" />
+            <u-checkbox v-model="checkboxValue" disabled>多选框2</u-checkbox>
+        </u-demo-item>
 
         <u-demo-item name="u-layout">
             <u-layout>
-                <u-button>默认横向排列</u-button>
+                <u-button @click="test">默认横向排列</u-button>
                 <u-button>默认横向排列</u-button>
                 <u-button>默认横向排列</u-button>
             </u-layout>
@@ -109,7 +113,8 @@ export default {
                 }
             ],
             selectValue: 1,
-            switchValue: true
+            switchValue: true,
+            checkboxValue: true
         }
     },
     created() {
@@ -117,7 +122,7 @@ export default {
     },
     methods: {
         test() {
-            l(this.selectValue)
+            l(this.checkboxValue)
         },
         confirmByJS() {
             this.$confirm('这是一个Confirm确认框')
