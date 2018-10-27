@@ -84,6 +84,9 @@
                 </template>
             </u-table>
         </u-demo-item>
+        <u-demo-item name="u-tree">
+            <u-tree :data="treeData" labelField="name" />
+        </u-demo-item>
         <u-modal :visible.sync="modalVisible" title="测试模态框">
             这里可以随意自定义html内容
         </u-modal>
@@ -95,6 +98,28 @@ import UDemoItem from '@/components/u-demo-item'
 import { getAllTopic } from '@/server'
 
 const l = console.log
+const treeData = {
+    name: 'China',
+    children: [
+        { name: 'Beijing' },
+        { name: 'Shaanxi' },
+        {
+            name: 'Zhejiang',
+            children: [
+                {
+                    name: 'Hangzhou',
+                    children: [{ name: 'Binjiang' }, { name: 'Xiaoshan' }]
+                },
+                { name: 'Ningbo' },
+                { name: 'Quzhou' },
+                {
+                    name: 'Jinhua',
+                    children: [{ name: 'Wucheng' }]
+                }
+            ]
+        }
+    ]
+}
 export default {
     components: { UDemoItem },
     data() {
@@ -114,7 +139,8 @@ export default {
             ],
             selectValue: 1,
             switchValue: true,
-            checkboxValue: true
+            checkboxValue: true,
+            treeData
         }
     },
     created() {
