@@ -1,6 +1,6 @@
 # standard-vue-project
 
-A standard manager system project by vue-cli3.0 for AI TEAM STANDARD
+A standard manager system project by vue-cli3.0 base on AI TEAM STANDARD
 
 ## Quick Start
 ``` bash
@@ -80,21 +80,25 @@ project
 * u-select
 * u-switch @hsy
 * u-checkbox
-* u-radio TODO
 
 ### Layout
 
 * u-tab
 * u-table @henry
-* u-pagination TODO
 * u-tree @yrq110
-* u-step TODO
+
 
 ### Dialog
 
 * u-modal(&& confirm && alert)
 * u-toast
-* u-popup TODO
+
+### TODO
+
+* u-radio
+* u-popup
+* u-pagination
+* u-step
 
 ## Preview
 
