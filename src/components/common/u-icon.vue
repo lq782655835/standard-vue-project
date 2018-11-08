@@ -1,5 +1,5 @@
 <template>
-    <a :class="['u-icon', isSvg ? name : '', {'disclick': disclick}]" 
+    <a :class="['u-icon', isSvg ? name : '']"
         :href="href" :disabled="disabled"
         @click="onClick" v-on="listeners">
         <svgicon v-if="isSvg" :name="name" :scale="scale" :original="original" v-bind="$attrs" />
@@ -14,7 +14,6 @@ export default {
     mixins: [ULink],
     props: {
         name: { type: String, default: '' },
-        disclick: { type: Boolean, default: false },
         /* blew api look at https://github.com/MMF-FE/vue-svgicon */
         scale: { type: [String, Number], default: '1' },
         original: { type: Boolean, default: true }
@@ -42,8 +41,8 @@ export default {
     line-height: 0;
     overflow: hidden;
 
-    &.disclick {
-        cursor: default;
+    &[disabled] {
+        cursor: not-allowed;
     }
 
     img {

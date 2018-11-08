@@ -1,44 +1,44 @@
 <template>
     <div class="g-demo layout">
-        <u-demo-item name="u-link">
+        <d-component-item name="u-link">
             <u-link href="/">系统内导链</u-link>
             <u-link href="https://www.baidu.com">系统外导链百度</u-link>
-        </u-demo-item>
-        <u-demo-item name="u-button">
+        </d-component-item>
+        <d-component-item name="u-button">
             <u-button>默认按钮</u-button>
             <u-button color="primary">主要按钮</u-button>
             <u-button color="primary" disabled>禁用按钮</u-button>
             <u-button color="primary" size="s">小按钮</u-button>
             <u-button color="primary" href="https://www.baidu.com">导链按钮</u-button>
-        </u-demo-item>
-        <u-demo-item name="u-icon" desc="icon组件使用本地svg/image/网络图片">
+        </d-component-item>
+        <d-component-item name="u-icon" desc="icon组件使用本地svg/image/网络图片">
             <u-icon name="edit" />
             <u-icon scale="3" name="delete" color="#00FF00" @click="$toast.show('本地图片库更加适合实际项目')"/>
             <u-icon name="close" />
             <u-icon name="slef-image.png" />
             <u-icon name="https://upload.wikimedia.org/wikipedia/commons/6/6b/NetEase_Music_logo.svg" class="cloud-music"/>
-        </u-demo-item>
-        <u-demo-item name="u-select">
+        </d-component-item>
+        <d-component-item name="u-select">
             <u-select v-model="selectValue" :list="selectList" />
             <u-select :list="selectList" size="s" disabled />
-        </u-demo-item>
-        <u-demo-item name="u-input/textarea">
+        </d-component-item>
+        <d-component-item name="u-input/textarea">
             <u-input v-model="inputValue" placeholder="请输入专题名" />
             <u-input size="s" placeholder="小输入框" />
             <u-input disabled placeholder="禁用输入框" />
             <br /><br />
             <u-input type="textarea" placeholder="textarea输入框" />
-        </u-demo-item>
-        <u-demo-item name="u-switch">
+        </d-component-item>
+        <d-component-item name="u-switch">
             <u-switch v-model="switchValue" />
             <u-switch disabled />
-        </u-demo-item>
-        <u-demo-item name="u-checkbox">
+        </d-component-item>
+        <d-component-item name="u-checkbox">
             <u-checkbox v-model="checkboxValue" label="多选框" />
             <u-checkbox v-model="checkboxValue" disabled>多选框2</u-checkbox>
-        </u-demo-item>
+        </d-component-item>
 
-        <u-demo-item name="u-layout">
+        <d-component-item name="u-layout">
             <u-layout>
                 <u-button @click="test">默认横向排列</u-button>
                 <u-button>默认横向排列</u-button>
@@ -49,18 +49,19 @@
                 <u-button>竖向排列</u-button>
                 <u-button>竖向排列</u-button>
             </u-layout>
-        </u-demo-item>
+        </d-component-item>
 
-        <u-demo-item name="u-toast">
+        <d-component-item name="u-toast">
             <u-button @click="$toast.show('这是一个toast提示框')">编程式打开toast</u-button>
             <u-button @click="$toast.show('这是一个错误提示框', 'error')">错误toast</u-button>
-        </u-demo-item>
-        <u-demo-item name="u-modal/confirm/alert">
-            <u-button @click="modalVisible = true">打开自定义模态框</u-button>
-            <u-button @click="confirmByJS">编程式打开Confirm模态框</u-button>
-            <u-button @click="alertByJS">编程式打开Alert模态框</u-button>
-        </u-demo-item>
-        <u-demo-item name="u-tabs/tab">
+        </d-component-item>
+        <d-component-item name="u-modal/confirm/alert">
+            <u-button @click="modalVisible=true">visible方式打开模态框</u-button>
+            <u-button @click="openModalByJsAPI">js api方式打开自定义模态框</u-button>
+            <u-button @click="confirmByJS">js api方式打开Confirm模态框</u-button>
+            <u-button @click="alertByJS">js api方式打开Alert模态框</u-button>
+        </d-component-item>
+        <d-component-item name="u-tabs/tab">
             <u-tabs>
                 <u-tab title="普通tab1">测试1tab内容</u-tab>
                 <u-tab title="普通tab2">测试2tab内容</u-tab>
@@ -71,8 +72,8 @@
                 <u-tab title="去往Demo" to="/demo"></u-tab>
                 <u-tab title="路由tab">测试3内容</u-tab>
             </u-tabs>
-        </u-demo-item>
-        <u-demo-item name="u-table">
+        </d-component-item>
+        <d-component-item name="u-table">
             <u-table :list="tableList">
                 <template slot-scope="{ row, rowIndex }">
                     <u-table-column label="分类" width="100px">{{row.tab}}</u-table-column>
@@ -83,19 +84,22 @@
                     </u-table-column>
                 </template>
             </u-table>
-        </u-demo-item>
-        <u-demo-item name="u-tree">
+        </d-component-item>
+        <d-component-item name="u-tree">
             <u-tree :data="treeData" labelField="name" />
-        </u-demo-item>
+        </d-component-item>
         <u-modal :visible.sync="modalVisible" title="测试模态框">
             这里可以随意自定义html内容
         </u-modal>
+
     </div>
 </template>
 
 <script>
-import UDemoItem from '@/components/u-demo-item'
+import DComponentItem from '@/components/demo/d-component-item'
+import DModalTest from '@/components/demo/d-modal-test'
 import { getAllTopic } from '@/server'
+import { transfer } from '@/utils/helper'
 
 const l = console.log
 const treeData = {
@@ -121,7 +125,7 @@ const treeData = {
     ]
 }
 export default {
-    components: { UDemoItem },
+    components: { DComponentItem },
     data() {
         return {
             tableList: [],
@@ -148,7 +152,10 @@ export default {
     },
     methods: {
         test() {
-            l(this.checkboxValue)
+            this.selectValue = 2
+        },
+        openModalByJsAPI() {
+            transfer(DModalTest)({title: 'js调用弹开模态框'}).then(() => console.log('关闭弹窗之后todo...'))
         },
         confirmByJS() {
             this.$confirm('这是一个Confirm确认框')

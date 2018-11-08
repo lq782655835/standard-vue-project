@@ -25,12 +25,15 @@ export default {
     },
     data() {
         return {
-            open: false,
+            open: false
         }
     },
     computed: {
         formatList() {
-            return this.list.map(item => ({ label: item[this.labelField], value: item[this.valueField] }))
+            return this.list.map(item => (Object.assign({}, item, {
+                label: item[this.labelField],
+                value: item[this.valueField]
+            })))
         },
         selectedItem() {
             if (!this.value) return {}

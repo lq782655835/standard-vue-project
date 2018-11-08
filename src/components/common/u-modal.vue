@@ -12,11 +12,13 @@
                 <slot>{{ content }}</slot>
             </div>
             <!-- 操作区 -->
-            <div class="u-modal-foot" v-if="okButton || cancelButton">
-                <u-button v-if="cancelButton" @click="cancel">{{cancelButton}}</u-button>
-                <u-button v-if="okButton" @click="ok"
-                    :disabled="!enableConfirm" color="primary">{{okButton}}</u-button>
-            </div>
+            <slot name="foot">
+                <div class="u-modal-foot" v-if="okButton || cancelButton">
+                    <u-button v-if="cancelButton" @click="cancel">{{cancelButton}}</u-button>
+                    <u-button v-if="okButton" @click="ok"
+                        :disabled="!enableConfirm" color="primary">{{okButton}}</u-button>
+                </div>
+            </slot>
             <u-icon v-if="showClose" name="close" @click="cancel" class="close" />
         </div>
     </div>
