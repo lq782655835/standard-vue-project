@@ -14,7 +14,7 @@
 export default {
     props: {
         data: { type: Object, required: true },
-        labelField: { type: String, default: 'label'}
+        labelField: { type: String, default: 'label' }
     },
     data() {
         return {
@@ -63,5 +63,4 @@ export default {
         margin-left: 20px;
     }
 }
-
 </style>

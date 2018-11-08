@@ -58,6 +58,7 @@
         <d-component-item name="u-modal/confirm/alert">
             <u-button @click="modalVisible=true">visible方式打开模态框</u-button>
             <u-button @click="openModalByJsAPI">js api方式打开自定义模态框</u-button>
+            <u-button @click="openModalForm">表单异步处理</u-button>
             <u-button @click="confirmByJS">js api方式打开Confirm模态框</u-button>
             <u-button @click="alertByJS">js api方式打开Alert模态框</u-button>
         </d-component-item>
@@ -98,6 +99,7 @@
 <script>
 import DComponentItem from '@/components/demo/d-component-item'
 import DModalTest from '@/components/demo/d-modal-test'
+import DModalForm from '@/components/demo/d-modal-form'
 import { getAllTopic } from '@/server'
 import { transfer } from '@/utils/helper'
 
@@ -155,7 +157,10 @@ export default {
             this.selectValue = 2
         },
         openModalByJsAPI() {
-            transfer(DModalTest)({title: 'js调用弹开模态框'}).then(() => console.log('关闭弹窗之后todo...'))
+            transfer(DModalTest)({ title: 'js调用弹开模态框' }).then(() => console.log('关闭弹窗之后todo...'))
+        },
+        openModalForm() {
+            transfer(DModalForm)({ title: '表单异步' }).then(data => console.log('拿到数据', data))
         },
         confirmByJS() {
             this.$confirm('这是一个Confirm确认框')

@@ -23,7 +23,7 @@ export default {
 
             this.$emit('toggle', this.currentValue)
             this.$emit('update:value', this.currentValue) // allow for sync
-            this.$emit('input', this.currentValue)        // allow for v-model
+            this.$emit('input', this.currentValue) // allow for v-model
         }
     }
 }

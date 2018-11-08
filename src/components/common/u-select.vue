@@ -30,10 +30,12 @@ export default {
     },
     computed: {
         formatList() {
-            return this.list.map(item => (Object.assign({}, item, {
-                label: item[this.labelField],
-                value: item[this.valueField]
-            })))
+            return this.list.map(item =>
+                Object.assign({}, item, {
+                    label: item[this.labelField],
+                    value: item[this.valueField]
+                })
+            )
         },
         selectedItem() {
             if (!this.value) return {}
@@ -48,7 +50,7 @@ export default {
         selectItem(item) {
             this.$emit('select', item)
             this.$emit('update:value', item.value) // allow sync api
-            this.$emit('input', item.value)        // allow v-model api
+            this.$emit('input', item.value) // allow v-model api
             this.open = false
         }
     }

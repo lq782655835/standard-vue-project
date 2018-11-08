@@ -8,7 +8,7 @@
 <script>
 export default {
     props: {
-        checked: { type: Boolean, default: false  },
+        checked: { type: Boolean, default: false },
         label: { type: String, default: '' },
         disabled: { type: Boolean, default: false }
     },
@@ -16,7 +16,7 @@ export default {
         prop: 'checked',
         event: 'change'
     },
-    data () {
+    data() {
         return {
             isCheck: this.checked
         }
@@ -31,7 +31,7 @@ export default {
             if (this.disabled) return
 
             this.isCheck = !this.isCheck
-            this.$emit('change', this.isCheck)         // allow v-modal
+            this.$emit('change', this.isCheck) // allow v-modal
             this.$emit('update:checked', this.isCheck) // allow sync
             this.$emit('check', this.isCheck)
         }
@@ -54,5 +54,3 @@ export default {
     }
 }
 </style>
-
-
