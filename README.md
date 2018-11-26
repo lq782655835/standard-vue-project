@@ -1,12 +1,12 @@
 # standard-vue-project
 
-A standard manager system project by vue-cli3.0 base on AI TEAM STANDARD
+A standard manager system project by vue-cli3.0 base on [AI TEAM STANDARD](https://lq782655835.github.io/blogs/dist/team-standard/standard-ai-js.html)
 
 ## Quick Start
 ``` bash
 git clone https://github.com/lq782655835/standard-vue-project.git
 cd standard-vue-project
-npm install && npm run serve
+npm install && npm run dev
 ```
 
 ## Standard Project Structure
