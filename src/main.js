@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import app from './app.vue'
+import app from '@/app.vue'
 import router from '@/router'
 import '@/plugins' /* 组件，指令，插件等core统一入口 */
 
