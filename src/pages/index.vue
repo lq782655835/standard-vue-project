@@ -1,5 +1,7 @@
 <template>
     <div class="g-index">
+        your web page content
+        <u-button color="primary" to="/demo">go demo</u-button>
     </div>
 </template>
 
