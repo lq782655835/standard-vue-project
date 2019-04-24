@@ -1,6 +1,6 @@
 # standard-vue-project
 
-A standard manager system project by vue-cli3.0 base on [AI TEAM STANDARD](https://lq782655835.github.io/blogs/dist/team-standard/standard-ai-js.html)
+A standard manager system project by vue-cli3.0 base on [AI TEAM STANDARD](https://lq782655835.github.io/blogs/team-standard/0.standard-ai-summary.html)
 
 ## Quick Start
 ``` bash
