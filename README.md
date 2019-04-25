@@ -1,8 +1,11 @@
 # standard-vue-project
 
-A standard manager system project by vue-cli3.0 base on [AI TEAM STANDARD](https://lq782655835.github.io/blogs/team-standard/0.standard-ai-summary.html)
+A standard manager system project by vue-cli3.0 base on [AI TEAM STANDARD](https://lq782655835.github.io/blogs/team-standard/0.standard-ai-summary.html).
 
 ## Quick Start
+
+you can create new project base on this git repository by [yiai-cli](https://github.com/lq782655835/yiai-cli) scaffold, or clone git repository.
+
 ``` bash
 git clone https://github.com/lq782655835/standard-vue-project.git
 cd standard-vue-project
@@ -77,41 +80,9 @@ project
 
 ## Light Weight Component
 
-### Base
+Base on [yi-ui](https://github.com/lq782655835/yi-ui) components
 
-* u-link
-* u-button
-* u-icon
-* u-layout
-
-### Form
-* u-input(&& textarea)
-* u-select
-* u-switch @hsy
-* u-checkbox
-
-### Layout
-
-* u-tab
-* u-table @henry
-* u-tree @yrq110
-
-
-### Dialog
-
-* u-modal(&& confirm && alert)
-* u-toast
-
-### TODO
-
-* u-radio
-* u-popup
-* u-pagination
-* u-step
-
-## Preview
-
-![image](https://user-images.githubusercontent.com/6310131/47153017-e3d31880-d310-11e8-9bea-f53cb2cb22c6.png)
+![image](https://user-images.githubusercontent.com/6310131/56558066-fbe16880-65cf-11e9-9940-07c7be20834c.png)
 
 ## License
 
