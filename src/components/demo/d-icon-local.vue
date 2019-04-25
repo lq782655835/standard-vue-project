@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import ULink from './u-link.vue'
+import { ULink } from 'yi-ui'
 
 export default {
     mixins: [ULink],
