@@ -1,7 +1,5 @@
 <template>
-    <u-modal
-        :visible="visible" :title="title"
-        @before-close="submit" @close="close">
+    <u-modal :visible="visible" :title="title" @before-close="submit" @close="close">
         <ul>
             <li><u-input v-model="name" placeholder="姓名" /></li>
             <li><u-input v-model="age" placeholder="年龄" /></li>

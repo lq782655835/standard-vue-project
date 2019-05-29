@@ -5,12 +5,12 @@
   "scripts": {
     "dev": "vue-cli-service serve --open & npm run svg",
     "build": "vue-cli-service build",
+    "build:analyz": "vue-cli-service build --report",
+    "svg": "vsvg -s ./src/assets/svg -t ./src/assets/icon",
     "format": "prettier --write './src/**/*.{js,vue,json}'",
     "lint": "vue-cli-service lint --fix",
-    "svg": "vsvg -s ./src/assets/svg -t ./src/assets/icon",
     "inspect": "jsinspect ./src",
-    "codereview": "jscpd ./src",
-    "analyz": "npm_config_report=true npm run build"
+    "codereview": "jscpd ./src"
   },
   "husky": {
     "hooks": {
@@ -35,8 +35,7 @@
     "node-sass": "^4.9.3",
     "prettier": "^1.14.2",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.17",
-    "webpack-bundle-analyzer": "^3.0.3"
+    "vue-template-compiler": "^2.5.17"
   },
   "postcss": {
     "plugins": {

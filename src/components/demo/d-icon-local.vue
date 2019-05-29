@@ -1,7 +1,5 @@
 <template>
-    <a :class="['u-icon', isSvg ? name : '']"
-        :href="href" :disabled="disabled"
-        @click="onClick" v-on="listeners">
+    <a :class="['u-icon', isSvg ? name : '']" :href="href" :disabled="disabled" @click="onClick" v-on="listeners">
         <svgicon v-if="isSvg" :name="name" :scale="scale" :original="original" v-bind="$attrs" />
         <img v-else :src="imgSrc" v-bind="$attrs" />
     </a>

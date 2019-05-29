@@ -1,5 +1,5 @@
 <template>
-<div class="g-demo layout">
+    <div class="g-demo layout">
         <d-component-item name="为什么有yi-ui组件库">
             当前开源市场（Vue技术栈）有非常多成熟的组件库，比如ElementUI、iView等。
             这些组件库主打大而全，有完备的兼容性和较广的覆盖性，特别适合企业级中后台系统开发，尤其是针对没有交互和视觉同学的开发团队，能显著提高团队的效率。
@@ -34,18 +34,11 @@
                 <u-icon name="check_circle" size="40px" color="#FF00FF" />
                 <u-icon name="info" href="http://www.baidu.com" />
                 <u-icon name="face" to="/demo" disabled />
-                <u-link href="https://material.io/icons/" target="_blank" color="primary"
-                    >更多图标</u-link
-                >
+                <u-link href="https://material.io/icons/" target="_blank" color="primary">更多图标</u-link>
             </u-layout>
             <u-layout>
                 <d-icon-local name="edit" />
-                <d-icon-local
-                    scale="3"
-                    name="delete"
-                    color="#00FF00"
-                    @click="$toast.show('本地图片库更加适合实际项目')"
-                />
+                <d-icon-local scale="3" name="delete" color="#00FF00" @click="$toast.show('本地图片库更加适合实际项目')" />
                 <d-icon-local name="close" />
                 <d-icon-local name="slef-image.png" />
                 <d-icon-local

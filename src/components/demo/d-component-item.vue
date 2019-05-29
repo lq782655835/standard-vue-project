@@ -1,8 +1,8 @@
 <template>
     <div class="u-demo-item">
         <p class="c-title">
-            {{name}}
-            <span class="desc">{{desc}}</span>
+            {{ name }}
+            <span class="desc">{{ desc }}</span>
         </p>
         <div class="c-content">
             <slot></slot>
@@ -18,7 +18,6 @@ export default {
     }
 }
 </script>
-
 
 <style lang="scss" scoped>
 .u-demo-item {
