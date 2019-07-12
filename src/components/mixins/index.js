@@ -1,3 +1,4 @@
+import ListMixin from './list-mixin'
 import PopupModalMixin from './popup-modal-mixin'
 
-export { PopupModalMixin }
+export { ListMixin, PopupModalMixin }
